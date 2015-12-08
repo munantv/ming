@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>大明辅弼</title>
+    <link href="./themes/default/css/main.css" rel="stylesheet">
+    <link href="./themes/default/css/application.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid" id="banner-region">
+            <div class="navbar-header">
+                <a class="navbar-brand huawenxingkai" href="#">大明辅弼工具</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div id="main-region" class="main-region container">
+            <p>工具载入中</p>
+        </div>
+    </div>
+
+    <script type="text/template" id="player-tpl">
+        <span>
+            玩家{{id}} <input type="text" placeholder="ID"></input>
+            <button type="button" class="btn btn-default button-draw">摸</button>
+        </span>
+        <ul>
+            {{#each cards}}
+            <li>
+                <span>{{id}} {{text}}</span>
+                <button type="button" class="btn btn-default button-throw" data="{{id}}">弃</button>
+                <input type="text" style="width:15%"></input>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <script type="text/template" id="deck-tpl">
+        <h5>{{name}}</h5>
+        <ul>
+            {{#each deck}}
+            <li>{{id}} {{text}}</li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <script type="text/template" id="start-tpl">
+        <div class="row">
+            <div class="col-md-3">
+                <div>
+                    <button type="button" class="btn btn-danger button-start">重新开始</button>
+                </div>
+                <div id="deck-region"></div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-6" id="player1-region"></div>
+                    <div class="col-md-6" id="player2-region"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" id="player3-region"></div>
+                    <div class="col-md-6" id="player4-region"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" id="player5-region"></div>
+                    <div class="col-md-6" id="player6-region"></div>
+                </div>
+                <div id="abandoned-region"></div>
+            </div>
+        </div>
+    </script>
+
+    <script src="./vendor/jquery.js"></script>
+    <script src="./vendor/underscore.js"></script>
+    <script src="./vendor/underscore.string.min.js"></script>
+    <script src="./vendor/backbone.js"></script>
+    <script src="./vendor/backbone.marionette.js"></script>
+    <script src="./vendor/spin.js"></script>
+    <script src="./vendor/handlebars.js"></script>
+    <script src="./vendor/swag.js"></script>
+    <script src="./vendor/bootstrap.js"></script>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/apps/roles/roles_app.js"></script>
+    <script src="./js/apps/roles/data/cards.js"></script>
+    <script src="./js/apps/roles/start/start_controller.js"></script>
+    <script src="./js/apps/roles/start/start_view.js"></script>
+
+    <script type="text/javascript">
+    UtilManager.start();
+    </script>
+</body>
+
+</html>

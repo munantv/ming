@@ -1,0 +1,24 @@
+body {
+    /* 60px to move the container down and
+	* make room for the navigation bar */
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 30px;
+}
+.menu-region {
+	padding-left: 70px;
+	padding-top: 60px;
+}
+.huawenxingkai {
+	font-family: STXingkai, "华文行楷", KaiTi, "楷体", SimSun, "宋体";
+}
+.kaiti {
+	font-family: KaiTi, "楷体", SimSun, "宋体";
+}
+.helper-text {
+	color: #737373;
+	font-size: 10px;
+}
+.padding {
+	padding-top: 20px;
+}
