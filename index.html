@@ -21,10 +21,8 @@
             <p>工具载入中</p>
         </div>
     </div>
-
     <script type="text/template" id="player-tpl">
         <span>
-            玩家{{id}} <input type="text" placeholder="ID"></input>
             <button type="button" class="btn btn-default button-draw">摸</button>
         </span>
         <ul>
@@ -37,7 +35,6 @@
             {{/each}}
         </ul>
     </script>
-
     <script type="text/template" id="deck-tpl">
         <h5>{{name}}</h5>
         <ul>
@@ -46,7 +43,6 @@
             {{/each}}
         </ul>
     </script>
-
     <script type="text/template" id="start-tpl">
         <div class="row">
             <div class="col-md-3">
@@ -57,22 +53,57 @@
             </div>
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-6" id="player1-region"></div>
-                    <div class="col-md-6" id="player2-region"></div>
+                    <div class="col-md-6">
+                        <div class="wrapper">
+                            玩家1
+                            <input type="text" placeholder="ID"></input>
+                        </div>
+                        <div id="player1-region"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wrapper">
+                            玩家2
+                            <input type="text" placeholder="ID"></input>
+                        </div>
+                        <div id="player2-region"></div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6" id="player3-region"></div>
-                    <div class="col-md-6" id="player4-region"></div>
+                    <div class="col-md-6">
+                        <div class="wrapper">
+                            玩家3
+                            <input type="text" placeholder="ID"></input>
+                        </div>
+                        <div id="player3-region"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wrapper">
+                            玩家4
+                            <input type="text" placeholder="ID"></input>
+                        </div>
+                        <div id="player4-region"></div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6" id="player5-region"></div>
-                    <div class="col-md-6" id="player6-region"></div>
+                    <div class="col-md-6">
+                        <div class="wrapper">
+                            玩家5
+                            <input type="text" placeholder="ID"></input>
+                        </div>
+                        <div id="player5-region"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wrapper">
+                            玩家6
+                            <input type="text" placeholder="ID"></input>
+                        </div>
+                        <div id="player6-region"></div>
+                    </div>
                 </div>
                 <div id="abandoned-region"></div>
             </div>
         </div>
     </script>
-
     <script src="./vendor/jquery.js"></script>
     <script src="./vendor/underscore.js"></script>
     <script src="./vendor/underscore.string.min.js"></script>
@@ -82,13 +113,11 @@
     <script src="./vendor/handlebars.js"></script>
     <script src="./vendor/swag.js"></script>
     <script src="./vendor/bootstrap.js"></script>
-
     <script src="./js/main.js"></script>
     <script src="./js/apps/roles/roles_app.js"></script>
     <script src="./js/apps/roles/data/cards.js"></script>
     <script src="./js/apps/roles/start/start_controller.js"></script>
     <script src="./js/apps/roles/start/start_view.js"></script>
-
     <script type="text/javascript">
     UtilManager.start();
     </script>
